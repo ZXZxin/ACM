@@ -1,8 +1,8 @@
-//ÌâÄ¿Á´½Ó£ºhttp://acm.hdu.edu.cn/showproblem.php?pid=2084
-//ÌâÄ¿´óÒâ£ºÇóÒ»¸öÊý×ÖÈý½ÇÐÎ´ÓÉÏÍùÏÂ×ßÒ»ÌõÂ·£¬Ê¹µÃÕâÌõÂ·Êý×éºÍ×î´ó
-//½âÌâË¼Â·£º¾­µäµÄDPÌâ
+//é¢˜ç›®é“¾æŽ¥ï¼šhttp://acm.hdu.edu.cn/showproblem.php?pid=2084
+//é¢˜ç›®å¤§æ„ï¼šæ±‚ä¸€ä¸ªæ•°å­—ä¸‰è§’å½¢ä»Žä¸Šå¾€ä¸‹èµ°ä¸€æ¡è·¯ï¼Œä½¿å¾—è¿™æ¡è·¯æ•°ç»„å’Œæœ€å¤§
+//è§£é¢˜æ€è·¯ï¼šç»å…¸çš„DPé¢˜ã€‚
 
-//£¨¼ÇÒä»¯ËÑË÷£©
+//ï¼ˆè®°å¿†åŒ–æœç´¢ï¼‰
 #include <iostream>
 #include <string.h>
 #include <algorithm>
@@ -36,7 +36,7 @@ int main() {
 	return 0;
 }
 
-//(µÝÍÆ)
+//(é€’æŽ¨)
 #include <iostream>
 #include <string.h>
 #include <algorithm>
