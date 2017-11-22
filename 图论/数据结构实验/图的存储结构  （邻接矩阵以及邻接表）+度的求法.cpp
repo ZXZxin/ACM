@@ -30,7 +30,7 @@ void CreateMGraph(MGraph *G,char *filename){
 	for(int i = 0; i < G->numVertexes; i++)
 		for(int j = 0;j < G->numVertexes; j++)
 			G->arc[i][j] = Infinity; //邻接矩阵初始化
-    int i,j;
+        int i,j;
 	for(int k = 0;k < G->numEdges; k++){//printf("输入边(vi,vj)的下标i,下标j和权w：\n");
 		fscanf(in,"%d %d %d",&i,&j,&weight);
 		G->arc[i][j] = weight;
