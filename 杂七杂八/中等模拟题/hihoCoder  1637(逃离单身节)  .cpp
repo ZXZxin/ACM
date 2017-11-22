@@ -23,25 +23,25 @@ int main() {
        cout<<endl;
        for(int i = 1; i <= n; i++){
             for(int j = 1; j <= n; j++){
-                if(i == n - j+1)cout<<"/";
+                if(i == n-j+1)cout<<"/";
                 else cout<<" ";
             }
             for(int j = n+1; j <= 2*n; j++)cout<<" ";
             for(int j = 2*n+1; j <= 3*n; j++){
-                if(i + 2*n== j)cout<<"\\";
+                if(i + 2*n == j)cout<<"\\";
                 else cout<<" ";
             }
             for(int j = 3*n+1 ;j <= 4*n; j++){
                 if(i == n)cout<<"_";
                 else cout<<" ";
             }
-            for(int j = 4*n + 1; j <= 5*n; j++){
-                if(i == 5*n - j + 1)cout<<"/";
+            for(int j = 4*n+1; j <= 5*n; j++){
+                if(i == 5*n-j+1)cout<<"/";
                 else cout<<" ";
             }
             for(int j = 5*n+1; j <= 6*n; j++)cout<<" ";
             for(int j = 6*n+1; j <= 7*n; j++){
-                if(i +6*n == j)cout<<"\\";
+                if(i+6*n == j)cout<<"\\";
                 else cout<<" ";
             }
             cout<<endl;
@@ -59,7 +59,7 @@ int main() {
             if(i == 3*n)for(int j = 1; j <= n; j++)cout<<"_";
             else for(int j = 3*n+1; j <= 4*n; j++)cout<<" ";
             for(int j = 4*n+1; j <= 7*n; j++){
-                if(i == 7*n - j+1)cout<<"/";
+                if(i == 7*n-j+1)cout<<"/";
                 else cout<<" ";
             }
             cout<<endl;
