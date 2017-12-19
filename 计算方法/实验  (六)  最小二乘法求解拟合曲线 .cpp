@@ -1,5 +1,6 @@
 //最小二乘法求解拟合曲线
 //求解过程看书上P116(刘师少版)
+
 #include <iostream>
 #include <stdio.h>
 #include <math.h>
@@ -13,6 +14,7 @@ double R[maxn];
 
 int main() {
 	//freopen("in.txt", "r", stdin);
+	//freopen("out.txt", "w", stdout);
 	int n, m;
 	scanf("%d", &n);//数据的组数
 	for (int i = 1; i <= n; i++)scanf("%lf", &x[i]);
@@ -53,11 +55,11 @@ int main() {
 	for (int i = 0; i <= m; i++) printf("a[%d] = %6.4f\n", i, ans[i]);
 	for (int i = 1; i <= n; i++) {
 		double sum = ans[0];
-		for (int j = 1; j <= m; j++)sum += ans[j]*pow(x[i], j);
+		for (int j = 1; j <= m; j++)sum += ans[j] * pow(x[i], j);
 		R[i] = sum - y[i];
 	}
 	printf("\n余项R数组为:\n");
-	for (int i = 1; i <= n; i++)printf("R[%d] = %6.4f\n",i, R[i]);
+	for (int i = 1; i <= n; i++)printf("R[%d] = %6.4f\n", i, R[i]);
 	return 0;
 }
 /*
@@ -67,8 +69,38 @@ int main() {
 3
 */
 /*
- 4
- 1.36 1.73 1.95 2.28
- 14.094 16.844 18.475 20.963
- 1
- */
+4
+1.36 1.73 1.95 2.28
+14.094 16.844 18.475 20.963
+1
+输出:
+a数组如下:
+a[0] = 3.9374
+a[1] = 7.4626
+
+余项R数组为:
+R[1] = -0.0074
+R[2] = 0.0037
+R[3] = 0.0145
+R[4] = -0.0108
+
+*/
+/*
+6
+0 1 2 3 4 5
+5 2 1 1 2 3
+2
+输出:
+a数组如下:
+a[0] = 4.7143
+a[1] = -2.7857
+a[2] = 0.5000
+
+余项R数组为:
+R[1] = -0.2857
+R[2] = 0.4286
+R[3] = 0.1429
+R[4] = -0.1429
+R[5] = -0.4286
+R[6] = 0.2857
+*/
