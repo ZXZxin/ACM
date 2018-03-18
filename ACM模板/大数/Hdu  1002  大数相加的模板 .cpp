@@ -1,4 +1,4 @@
-//题目链接 : http://acm.hdu.edu.cn/showproblem.php?pid=1002
+﻿//题目链接 : http://acm.hdu.edu.cn/showproblem.php?pid=1002
 //大数加法的模板 : 注意返回的是string类型,不知道为什么char*类型不行
 
 #include <iostream>
@@ -23,7 +23,7 @@ string BigPositiveInteger_Add(char *s1,char *s2){   //可以说是计算大数�
             a[i] = temp%10;
             a[i+1] += (temp/10);
         }
-        else a[i] = a[i]+b[i];
+        else a[i] += b[i];
     }
     string c = "";
     if(a[maxL] != 0) c += a[maxL] + '0';
