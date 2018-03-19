@@ -30,6 +30,36 @@ string BigPositiveInteger_Add(char *s1,char *s2){   //可以说是计算大数�
     for(int i = maxL-1; i >= 0; i--)c += a[i] + '0';
     return c;
 }
+
+
+//乘法
+string BigInteger_Multiply(string s1,string s2){
+    int a[maxn],b[maxn],c[maxn*2 + 5];
+    memset(a,0,sizeof(a));
+    memset(b,0,sizeof(b));
+    memset(c,0,sizeof(c));
+    int len1 = s1.size(),len2 = s2.size();
+    for(int i = 0; i < len1; i++)a[i] = s1[len1-1-i]-'0'; //倒置
+    for(int i = 0; i < len2; i++)b[i] = s2[len2-1-i]-'0';
+    for(int i = 0; i < len1; i++){
+        for(int j = 0; j < len2; j++){
+            c[i+j] += a[i]*b[j];
+        }
+    }
+    for(int i = 0; i < maxn*2; i++){
+        if(c[i] >= 10){
+            c[i+1] += c[i]/10;
+            c[i] %= 10;
+        }
+    }
+    string ans = "";
+    int i;
+    for(i = maxn * 2; i >= 0; i--)if(c[i] != 0)break;
+    for(;i >= 0; i--)ans += c[i] + '0';
+    return ans;
+}
+
+
 int main(){
     //freopen("in.txt","r",stdin);
     int T,kase = 0;
